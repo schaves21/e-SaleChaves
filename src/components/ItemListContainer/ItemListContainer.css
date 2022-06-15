@@ -1,0 +1,22 @@
+.myH1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 2.5em;
+}
+
+.loading{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.error{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+}

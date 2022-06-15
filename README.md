@@ -1,70 +1,32 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Proyecto e-SaLe
 
-## Available Scripts
+## Primero pasos:
 
-In the project directory, you can run:
+1. Instalación de Node JS (versión utilizada v16.15.0).
+2. Crear la aplicación esale con el comando npx create-react-app
+3. Correr la aplicación con el comando npm start
 
-### `npm start`
+## Descripción del Proyecto: Este proyecto de e-commerce es elaborado en React Js, consumiendo datos de productos desde un Array local. El proyecto tiene las siguientes funcionalidades:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Es navegable en home y muestra todos los productos disponibles con una imagen, título, precio y stock.
+2. Desde el NavBar se puede navegar por las categorías de productos: Notebooks, Celulares, Televisores y Electrodomésticos. 
+3. También desde el NavBar puede navegar hacia las opciones de Contactos y Carrito.
+4. Al navegar por cada producto muestra el detalle: título, imagen, descripción, precio y stock. Aquí puede ir agregando el producto al Carrito.
+5. Al agregar el producto, puede finalizar la compra mostrándose la cantidad de productos seleccionados en el carrito.
+6. Cuando navegamos al carrito veremos el detalle de todos los productos seleccionados con el total a pagar y podrá finalizar la compra. 
+7. Continuará...
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Se utilizan las siguientes librerías que le aportan valor al proyecto: 
 
-### `npm test`
+1. React-Bootstrap para el NavBar : https://react-bootstrap.github.io/
+2. Material UI para el manejo de las Cards de Prodcutos : https://mui.com/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Para la creación de componentes se utilizó jsx
 
-### `npm run build`
+## Video mostrando la navegabilidad por la aplicación: https://github.com/schaves21/e-SaleChaves
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Descargar la aplicación desde: https://github.com/schaves21/e-SaleChaves
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

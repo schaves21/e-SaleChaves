@@ -1,0 +1,17 @@
+.contador{
+    width: 200px;
+    background-color: #fff;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.spanCount{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.agregarCarrito{
+    margin-top: 20px;
+}
+
