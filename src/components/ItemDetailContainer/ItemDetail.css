@@ -3,8 +3,24 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
+.card{
+    padding: 5px;
+}
+
+.link{
+    padding: 1%;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.link:hover{
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);  
+    color: #fff; 
+}
 
 

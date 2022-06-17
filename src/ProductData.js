@@ -83,7 +83,7 @@ const productos = [
     {
         id:10,
         category:"electrodomesticos",
-        title:"Refrigerador SAMSUNG RT35",
+        title:"Heladera SAMSUNG RT35",
         description:"Este refrigerador Samsung con Twin Cooling Plus mantiene tus alimentos frescos durante mucho más tiempo a la vez que le brinda un aspecto sobrio y elegante a tu cocina.",
         pictureURL:"https://d391ci4kxgasl8.cloudfront.net/fit-in/524x480/filters:fill(FFFFFF):quality(90):format(webp)/_img_productos/refrigerador-samsung-rt35-rt35k573bsl-foto1.jpg",
         price:"usd 927.00",

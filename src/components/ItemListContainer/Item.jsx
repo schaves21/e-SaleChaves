@@ -11,10 +11,10 @@ import { Link } from 'react-router-dom';
 export default function Item({ producto }) {
   return (
     <div className="item">
-      <Card  sx={{ maxWidth: 345 }}>
+      <Card className="card" sx={{ maxWidth: 350 }}>
         <CardMedia
           component="img"
-          height="350"
+          height="300"
           image={producto.pictureURL}
           alt="producto"
         />
@@ -29,9 +29,9 @@ export default function Item({ producto }) {
             Stock: {producto.stock}
           </Typography>
         </CardContent>
-        <CardActions>
-          <Link to={`/detalle/${producto.id}`}>Ver detalle del producto</Link>
-        </CardActions>
+        <CardContent>
+          <Link className="link" to={`/detalle/${producto.id}`}>Ver detalle del producto</Link>
+        </CardContent>
       </Card>
     </div>
   );

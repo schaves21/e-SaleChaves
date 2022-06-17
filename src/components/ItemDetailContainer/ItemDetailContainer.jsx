@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
     getData.finally(() => {
       setLoading(false);
     });
-  }, [])
+  }, [detalleId])
 
   return (
     <>

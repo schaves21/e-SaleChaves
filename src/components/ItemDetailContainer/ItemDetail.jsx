@@ -17,13 +17,13 @@ export default function ItemDetail({ data }) {
 
     return ( 
       <div className="itemDetail">
-        <Card  sx={{ maxWidth: 345 }}>
+        <Card className="card"  sx={{ maxWidth: 350 }}>
           <Typography gutterBottom variant="h5" component="div">
             {data.title}
           </Typography>
           <CardMedia
             component="img"
-            height="350"
+            height="300"
             image={data.pictureURL}
             alt="producto"
           />
@@ -38,9 +38,9 @@ export default function ItemDetail({ data }) {
               Stock: {data.stock}
             </Typography>
           </CardContent>
-            
-            {cart ? <Link to='/carrito'>Finalizar compra</Link> : <ItemCount inicio={1} stock={5} onAdd={onAdd} />}
-            
+          <CardContent>  
+            {cart ? <Link className="link" to='/carrito'>Finalizar compra</Link> : <ItemCount inicio={1} stock={5} onAdd={onAdd} />}
+          </CardContent> 
         </Card>   
       </div>
     );
