@@ -9,29 +9,29 @@ const Footer = () => {
           {/* Column1 */}
           <div className="col">
             <h4>Sucursales</h4>
-            <ui className="list-unstyled">
+            <ul className="list-unstyled">
               <li>Suc XXXXXXXXXXX</li>
               <li>Suc XXXXXXXXXXX</li>
               <li>Suc XXXXXXXXXXX</li>
-            </ui>
+            </ul>
           </div>
           {/* Column2 */}
           <div className="col">
             <h4>Ayuda</h4>
-            <ui className="list-unstyled">
+            <ul className="list-unstyled">
               <li>Ayuda XXXXXXXXXXX</li>
               <li>Ayuda XXXXXXXXXXX</li>
               <li>Ayuda XXXXXXXXXXX</li>
-            </ui>
+            </ul>
           </div>
           {/* Column3 */}
           <div className="col">
             <h4>Redes</h4>
-            <ui className="list-unstyled">
+            <ul className="list-unstyled">
               <li>Redes XXXXXXXXXXX</li>
               <li>Redes XXXXXXXXXXX</li>
               <li>Redes XXXXXXXXXXX</li>
-            </ui>
+            </ul>
           </div>
         </div>
         <hr />

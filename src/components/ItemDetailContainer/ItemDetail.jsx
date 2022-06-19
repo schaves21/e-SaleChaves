@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -6,13 +6,18 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
+import { useCartContext } from '../../context/CartContext';
 
 export default function ItemDetail({ data }) {
 
   const [cart, setCart] = useState(false);
 
+  const { isInCart, addItem } = useCartContext();
+
   const onAdd = (cantidad) => {
     setCart(true);
+    isInCart(data.id);
+    addItem(data, cantidad);
   }
 
     return ( 
