@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './ItemCount.css';
 import Button from '@mui/material/Button';
 
-function ItemCount( {inicio, stock, onAdd } ) {
+export const ItemCount = ({ inicio, stock, onAdd }) => {
 
     const [count, setCount] = useState(parseInt(inicio));
 

@@ -27,14 +27,12 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to='/home'>Home</Nav.Link>
-              <NavDropdown title="Productos" id="collasible-nav-dropdown">
-                <NavDropdown.Item as={Link} to='/categoria/notebooks'>Notebooks</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to='/categoria/celulares'>Celulares</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to='/categoria/televisores'>Televisores</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to='/categoria/electrodomesticos'>Electrodomésticos</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link as={Link} to='/contacto'>Contacto</Nav.Link>
-            </Nav>
+            <Nav.Link as={Link} to='/categoria/notebooks'>Notebooks</Nav.Link>
+            <Nav.Link as={Link} to='/categoria/celulares'>Celulares</Nav.Link>
+            <Nav.Link as={Link} to='/categoria/televisores'>Televisores</Nav.Link>
+            <Nav.Link as={Link} to='/categoria/electrodomesticos'>Electrodomésticos</Nav.Link>
+            <Nav.Link as={Link} to='/contacto'>Contacto</Nav.Link>
+          </Nav>
           <Nav>
             <Navbar.Brand as={Link} to='/carrito'>
               <img
@@ -44,7 +42,7 @@ const NavBar = () => {
                 className="d-inline-block align-top"
                 alt="carrito"
               />
-              <CartWidget carrito={1} />
+              <CartWidget />
             </Navbar.Brand>
           </Nav>
         </Navbar.Collapse>

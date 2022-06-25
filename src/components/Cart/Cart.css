@@ -1,0 +1,22 @@
+.emptyContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+    color: #fff;
+    font-size: 2em;
+}
+
+.linkHome{
+    color:dimgray;
+    text-decoration:none;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+    background: #fff 
+}
+
+.gridContainer{
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}

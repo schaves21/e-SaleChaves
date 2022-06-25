@@ -1,10 +1,13 @@
 import React from 'react';
+import { useCartContext } from '../../context/CartContext';
 
-function CartWidget({ carrito }) {
+export const CartWidget = () => {
+
+  const { getItemQty } = useCartContext();
 
   return (
     <>
-     <span>{carrito}</span> 
+     <span>{getItemQty() || ''}</span> 
     </>
   ); 
 }

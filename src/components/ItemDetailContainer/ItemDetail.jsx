@@ -10,14 +10,13 @@ import { useCartContext } from '../../context/CartContext';
 
 export default function ItemDetail({ data }) {
 
-  const [cart, setCart] = useState(false);
+  const [myCart, setMyCart] = useState(false);
 
-  const { isInCart, addItem } = useCartContext();
+  const { addItem } = useCartContext();
 
-  const onAdd = (cantidad) => {
-    setCart(true);
-    isInCart(data.id);
-    addItem(data, cantidad);
+  const onAdd = (quantity) => {
+    setMyCart(true);
+    addItem(data, quantity);
   }
 
     return ( 
@@ -37,14 +36,18 @@ export default function ItemDetail({ data }) {
               {data.description}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Precio: {data.price}
+              Precio: U$S {data.price}
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Stock: {data.stock}
             </Typography>
           </CardContent>
           <CardContent>  
-            {cart ? <Link className="link" to='/carrito'>Finalizar compra</Link> : <ItemCount inicio={1} stock={5} onAdd={onAdd} />}
+            {
+              myCart 
+                ? <Link className="link" to='/carrito'>Finalizar compra</Link> 
+                : <ItemCount inicio={1} stock={5} onAdd={onAdd} />
+            }
           </CardContent> 
         </Card>   
       </div>
