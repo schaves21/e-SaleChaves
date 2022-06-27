@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import './ItemListContainer.css';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
-
-import productos from '../../ProductData';
+import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore';
+import Spinner from 'react-bootstrap/Spinner'
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -14,32 +14,60 @@ const ItemListContainer = ({ greeting }) => {
   const {categoriaId} = useParams();
  
   useEffect(() => {
-    const getData = new Promise((resolve, rej) => {
-      setTimeout(() => {
-        resolve(productos);  
-      }, 2000);
-    });
-    if (categoriaId) {
-      getData.then(res => setData(res.filter(producto => producto.category === categoriaId)));
-    }else {
-      getData.then(res => setData(res));
+
+    const db = getFirestore();
+    const productsCollection = collection(db, 'products');
+    
+    if(categoriaId){
+      const consulta = query(productsCollection, where('category', '==', categoriaId));
+
+      getDocs(consulta)
+        .then (snapshot => {
+          setData(snapshot.docs.map((doc) =>( { ...doc.data(), id: doc.id })));
+        })
+        .catch((error) => {
+          setError(error);
+        })
+        .finally(() =>{
+          setLoading(false); 
+        });
+    } else {
+      getDocs(productsCollection)
+      .then (snapshot => {
+        setData(snapshot.docs.map((doc) =>( { ...doc.data(), id: doc.id })));
+      })
+      .catch((error) => {
+        setError(error);
+      })
+      .finally(() =>{
+        setLoading(false); 
+      });
     }
-    getData.catch((error) => {
-      setError(true);
-      console.log(error);
-    });
-    getData.finally(() => {
-      setLoading(false);
-    });
-  }, [categoriaId])
+  }, [categoriaId]);
   
   return (
+
     <>
-      <h1 className='myH1'>{greeting}</h1>;
-      <div className="loading">{loading && 'Cargando...'}</div>
-      <div className="error">{error && 'Hubo un error al cargar los Productos'}</div>
+
+      <h1 className='myH1'>
+        {greeting}
+      </h1>
+
+      <div className="loading">
+        {loading && <Spinner animation="border" size="sm" />}
+        {loading && <Spinner animation="border" />}
+        {loading && <Spinner animation="grow" size="sm" />}
+        {loading && <Spinner animation="grow" /> }
+      </div>
+
+      <div className="error">
+        {error && 'Hubo un error al cargar los Productos'}
+      </div>
+
       <ItemList data={data} />
+
     </>
+
   )
 
 }

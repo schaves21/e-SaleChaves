@@ -20,7 +20,7 @@ function App() {
             <MyProvider>
               <NavBar /> 
                 <Routes>
-                  <Route path='/' element={<ItemListContainer greeting={'Bienvenidos al sitio'} />} />
+                  <Route path='/' element={<ItemListContainer greeting={'Bienvenidos al sitio con las mejores ofertas en tecnología'} />} />
                   <Route path='/home' element={<ItemListContainer />} />
                   <Route path='/categoria/:categoriaId' element={<ItemListContainer />} /> 
                   <Route path='/detalle/:detalleId' element={<ItemDetailContainer />} />

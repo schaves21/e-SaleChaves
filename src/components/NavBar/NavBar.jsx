@@ -3,11 +3,11 @@ import './NavBar.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Logo from '../../assets/logo.png';
 import Cart from '../../assets/cart.png';
 import { Link } from 'react-router-dom'; 
 import CartWidget from './CartWidget';
+import Categories from '../Categories/Categories';
 
 
 const NavBar = () => {
@@ -27,10 +27,7 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to='/home'>Home</Nav.Link>
-            <Nav.Link as={Link} to='/categoria/notebooks'>Notebooks</Nav.Link>
-            <Nav.Link as={Link} to='/categoria/celulares'>Celulares</Nav.Link>
-            <Nav.Link as={Link} to='/categoria/televisores'>Televisores</Nav.Link>
-            <Nav.Link as={Link} to='/categoria/electrodomesticos'>Electrodomésticos</Nav.Link>
+            <Categories />
             <Nav.Link as={Link} to='/contacto'>Contacto</Nav.Link>
           </Nav>
           <Nav>

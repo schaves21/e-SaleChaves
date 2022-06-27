@@ -21,7 +21,7 @@ export default function ItemDetail({ data }) {
 
     return ( 
       <div className="itemDetail">
-        <Card className="card"  sx={{ maxWidth: 350 }}>
+        <Card className="card"  sx={{ maxWidth: 345 }}>
           <Typography gutterBottom variant="h5" component="div">
             {data.title}
           </Typography>
@@ -49,7 +49,7 @@ export default function ItemDetail({ data }) {
                 : <ItemCount inicio={1} stock={5} onAdd={onAdd} />
             }
           </CardContent> 
-        </Card>   
+        </Card>  
       </div>
     );
   }

@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import productos from '../../ProductData';
 import './ItemDetailContainer.css';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
+import Spinner from 'react-bootstrap/Spinner';
 
 const ItemDetailContainer = () => {
 
@@ -13,26 +14,39 @@ const ItemDetailContainer = () => {
   const {detalleId} = useParams();
 
   useEffect(() => {
-    const getData = new Promise((resolve, rej) => {
-      setTimeout(() => {
-        resolve(productos);  
-      }, 2000);
-    });
-    getData.then(res => setData(res.find(producto => producto.id === parseInt(detalleId))));
-    getData.catch((error) => {
-      setError(true);
-      console.log(error);
-    });
-    getData.finally(() => {
-      setLoading(false);
+
+    const db = getFirestore();
+
+    const oneProduct = doc(db, 'products', detalleId )
+
+    getDoc(oneProduct).then((snapshot) => {
+      setData( { ...snapshot.data(), id: snapshot.id } );  
+    })
+    .catch((error) => {
+      setError(error);
+    })
+    .finally(() =>{
+      setLoading(false); 
     });
   }, [detalleId])
 
   return (
+    
     <>
-      <div className="loading">{loading && 'Cargando...'}</div>
-      <div className="error">{error && 'Hubo un error en el Producto'}</div>
+
+      <div className="loading">
+        {loading && <Spinner animation="border" size="sm" />}
+        {loading && <Spinner animation="border" />}
+        {loading && <Spinner animation="grow" size="sm" />}
+        {loading && <Spinner animation="grow" /> }
+      </div>
+
+      <div className="error">
+        {error && 'Hubo un error en el Producto'}
+      </div>
+
       <ItemDetail data={data} />
+
     </>
   )
 }
