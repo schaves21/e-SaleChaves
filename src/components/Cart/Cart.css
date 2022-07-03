@@ -7,6 +7,11 @@
     font-size: 2em;
 }
 
+.gridContainer{
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+
 .linkHome{
     color:dimgray;
     text-decoration:none;
@@ -16,7 +21,36 @@
     background: #fff 
 }
 
-.gridContainer{
-    margin-top: 10px;
-    margin-bottom: 10px; 
+.checkout{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buttonCheckout{
+    color: #fff;
+    text-decoration:none;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    background: forestgreen;
+    font-weight: bold;
+}
+
+.buttonCancel{
+    color: #fff;
+    text-decoration:none;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    background: red;
+    font-weight: bold;    
+}
+
+.buttonCheckout:hover, .buttonCancel:hover{
+    background: #fff;
+    color: dimgray;
 }

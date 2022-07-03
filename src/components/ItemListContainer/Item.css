@@ -10,15 +10,16 @@
 }
 
 .link{
-    padding: 1%;
+    color: #fff ;
+    padding: 2%;
     text-decoration: none;
-    background: #fff;
+    background: forestgreen;
     border-radius: 10px;
     font-weight: bold;
 }
 
 .link:hover{
-    background: linear-gradient(to top, #09203f 0%, #537895 100%);  
+    background: linear-gradient(to top, #09203f 0%, #537895 100%); 
     color: #fff; 
 }
 

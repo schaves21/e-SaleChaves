@@ -6,31 +6,29 @@ const Footer = () => {
     <div className="main-footer">
       <div className="container">
         <div className="row">
-          {/* Column1 */}
           <div className="col">
             <h4>Sucursales</h4>
             <ul className="list-unstyled">
-              <li>Suc XXXXXXXXXXX</li>
-              <li>Suc XXXXXXXXXXX</li>
-              <li>Suc XXXXXXXXXXX</li>
+              <li>General Flores 590 - Colonia</li>
+              <li>18 de Julio 1005 - Montevideo</li>
+              <li>Juan Gorlero 650 - Punta del Este</li>
             </ul>
           </div>
-          {/* Column2 */}
+
           <div className="col">
-            <h4>Ayuda</h4>
+            <h4>Preguntas Frecuentes</h4>
             <ul className="list-unstyled">
-              <li>Ayuda XXXXXXXXXXX</li>
-              <li>Ayuda XXXXXXXXXXX</li>
-              <li>Ayuda XXXXXXXXXXX</li>
+              <li>Envíos Gratis</li>
+              <li>Privacidad y Seguridad</li>
+              <li>Términos de Uso</li>
             </ul>
           </div>
-          {/* Column3 */}
           <div className="col">
-            <h4>Redes</h4>
+            <h4>Seguinos en</h4>
             <ul className="list-unstyled">
-              <li>Redes XXXXXXXXXXX</li>
-              <li>Redes XXXXXXXXXXX</li>
-              <li>Redes XXXXXXXXXXX</li>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Twitter</li>
             </ul>
           </div>
         </div>

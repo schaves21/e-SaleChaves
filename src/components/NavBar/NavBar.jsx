@@ -28,7 +28,6 @@ const NavBar = () => {
           <Nav className="me-auto">
             <Nav.Link as={Link} to='/home'>Home</Nav.Link>
             <Categories />
-            <Nav.Link as={Link} to='/contacto'>Contacto</Nav.Link>
           </Nav>
           <Nav>
             <Navbar.Brand as={Link} to='/carrito'>

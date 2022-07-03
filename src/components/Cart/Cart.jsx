@@ -9,7 +9,7 @@ import './Cart.css';
 
 const Cart = () => {
 
-  const { cart, getItemPrice } = useCartContext();
+  const { cart, getItemPrice, clear } = useCartContext();
 
   if(cart.length === 0){
     return(
@@ -50,9 +50,14 @@ const Cart = () => {
             </Grid>
           </Grid>
         </Paper>
-      </div>  
+        <div className="checkout">
+          <Link to='/checkout' className="buttonCheckout">Emitir Compra</Link>
+          <Link to='/' onClick={clear} className="buttonCancel">Cancelar</Link>
+        </div>
+      </div> 
     </>
   )
+
 }
 
 export default Cart;

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -45,7 +45,7 @@ export default function ItemDetail({ data }) {
           <CardContent>  
             {
               myCart 
-                ? <Link className="link" to='/carrito'>Finalizar compra</Link> 
+                ? <Link className="link" to='/carrito'>Ir al Carrito</Link> 
                 : <ItemCount inicio={1} stock={5} onAdd={onAdd} />
             }
           </CardContent> 
