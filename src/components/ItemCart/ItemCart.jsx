@@ -46,7 +46,7 @@ export default function ItemCart({ product }) {
                   {product.category}
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  Cantidad: {product.quantity}
+                  Cantidad: {product.count}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Precio unitario: U$S {product.price}
@@ -60,7 +60,7 @@ export default function ItemCart({ product }) {
             </Grid>
             <Grid item>
               <Typography variant="subtitle1" component="div">
-                Subtotal: U$S {product.quantity * product.price} 
+                Subtotal: U$S {product.count * product.price} 
               </Typography>
             </Grid>
           </Grid>

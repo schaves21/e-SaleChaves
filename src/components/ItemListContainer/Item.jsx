@@ -11,6 +11,7 @@ export default function Item({ producto }) {
     <div className="item">
       <Card className="card" sx={{ maxWidth: 350 }}>
         <CardMedia
+          className="productImg"
           component="img"
           height="300"
           image={producto.pictureURL}

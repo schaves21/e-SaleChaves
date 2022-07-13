@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import { useCartContext } from '../../context/CartContext';
 import {Link} from 'react-router-dom';
 import ItemCart from '../ItemCart/ItemCart';
@@ -10,6 +11,10 @@ import './Cart.css';
 const Cart = () => {
 
   const { cart, getItemPrice, clear } = useCartContext();
+  
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
 
   if(cart.length === 0){
     return(
@@ -24,8 +29,8 @@ const Cart = () => {
 
   return (
     <>
-      {
-        cart.map(product => <ItemCart key={product.id} product={product} />)
+      {        
+        cart.map(product =>  <ItemCart key={product.id} product={product} />)   
       }
       <div className="gridContainer">
         <Paper 
@@ -57,7 +62,6 @@ const Cart = () => {
       </div> 
     </>
   )
-
 }
 
 export default Cart;

@@ -9,6 +9,16 @@
     padding: 5px;
 }
 
+.productImg {
+    transition: transform .2s;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.productImg:hover {
+    transform: scale(1.1);
+}
+
 .link{
     color: #fff ;
     padding: 2%;

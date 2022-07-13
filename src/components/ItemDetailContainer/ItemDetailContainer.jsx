@@ -33,7 +33,6 @@ const ItemDetailContainer = () => {
   return (
     
     <>
-
       <div className="loading">
         {loading && <Spinner animation="border" size="sm" />}
         {loading && <Spinner animation="border" />}
@@ -45,8 +44,7 @@ const ItemDetailContainer = () => {
         {error && 'Hubo un error en el Producto'}
       </div>
 
-      <ItemDetail data={data} />
-
+      <ItemDetail detail={data} id={detalleId} />
     </>
   )
 }

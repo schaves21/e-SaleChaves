@@ -1,32 +1,59 @@
 
 # Proyecto e-SaLe
 
-## Primero pasos:
+## Descripción
 
-1. Instalación de Node JS (versión utilizada v16.15.0).
-2. Crear la aplicación esale con el comando npx create-react-app
-3. Correr la aplicación con el comando npm start
+Este repositorio contiene el proyecto de e-commerce de una tienda de productos tecnológicos, desarrollado en `React JS` y conectado con una base de datos en `Firebase`.
 
-## Descripción del Proyecto: Este proyecto de e-commerce es elaborado en React Js, consumiendo datos de productos desde un Array local. El proyecto tiene las siguientes funcionalidades:
+La aplicación consiste en un e-commerce en el cual se pueden filtrar los productos de acuerdo a las categorías, y acceder al detalle de cada producto. Los productos pueden ser agregados al carrito para luego confirmar la compra completando un formulario con los datos personales del usuario.
+
+Los productos, categorías y las órdenes de compra se almacenan en `Firebase`.
+
+El proyecto tiene las siguientes funcionalidades:
 
 1. Es navegable en home y muestra todos los productos disponibles con una imagen, título, precio y stock.
-2. Desde el NavBar se puede navegar por las categorías de productos: Notebooks, Celulares, Televisores y Electrodomésticos. 
-3. También desde el NavBar puede navegar hacia las opciones de Contactos y Carrito.
-4. Al navegar por cada producto muestra el detalle: título, imagen, descripción, precio y stock. Aquí puede ir agregando el producto al Carrito.
-5. Al agregar el producto, puede finalizar la compra mostrándose la cantidad de productos seleccionados en el carrito.
-6. Cuando navegamos al carrito veremos el detalle de todos los productos seleccionados con el total a pagar y podrá finalizar la compra. 
-7. Continuará...
+2. Desde el NavBar se puede navegar por las categorías de productos: Celulares, Electrodomésticos,Televisores y Notebooks. También se puede navegar hacia el Carrito para visualizar los productos seleccionados.
+3. Al navegar por cada producto muestra el detalle: título, imagen, descripción, categoría, precio y stock. Aquí puede ir agregando el producto al Carrito.
+4. Al agregar el producto, puede finalizar la compra navegando al Carrito.
+5. Estando en el Carrito se muestra el detalle de todos los productos seleccionados con el total a pagar y podrá emitir la orden de compra. 
+6. Para concretar la compra el usuario debe completar el formulario de contacto con el cual la tienda podrá comunicarse con el comprador para coordinar el pago y el envío del producto.
 
-## Se utilizan las siguientes librerías que le aportan valor al proyecto: 
+## Se utilizan las siguientes tecnologías/librerías que le aportan valor al proyecto: 
 
-1. React-Bootstrap para el NavBar : https://react-bootstrap.github.io/
-2. Material UI para el manejo de las Cards de Prodcutos : https://mui.com/
+* [React JS](https://reactjs.org/)
+* [React Router Dom](https://reactrouter.com/)
+* [React-Bootstrap](https://react-bootstrap.github.io/)
+* [Material UI](https://mui.com/)
+* [SweetAlert](https://sweetalert.js.org/guides/) & [SweetAlert2](https://sweetalert2.github.io/)
+* [React-Hook-Form](https://react-hook-form.com/)
+* [Firebase](https://firebase.google.com/) & deploy
 
-## Para la creación de componentes se utilizó jsx
+### React-Bootstrap
+Se escogió `React-Bootstrap` como librería para el NavBar agilizando el proceso de desarrollo y estilos del menú de navegación.  
+### Material UI
+Se escogió `Material UI` como librería de componentes para agilizar el proceso de desarrollo y estilos de la aplicación, como las cards de productos y el carrito.
+### SweetAlert
+Se escogió `SweetAlert` para añadir alertas personalizadas al usuario cuando intenta realizar una compra incorrecta (cantidad de productos seleccionados supera el stock o cantidad menor que uno).
+### React-hook-form
+Se escogió `React-hook-form` como librería para la validación de datos en el formulario de compra.
+### Firebase
+`Firestore Database` como gestor de la base datos para almacenar los productos, categorías y las órdenes de compra emitidas. 
 
-## Video mostrando la navegabilidad por la aplicación: https://github.com/schaves21/e-SaleChaves
+## Como ejecutar el proyecto de forma local:
 
-## Descargar la aplicación desde: https://github.com/schaves21/e-SaleChaves
+1. Descargar y descomprimir el repositorio de GitHub: `https://github.com/schaves21/e-SaleChaves`
+2. Abrir el proyecto con un editor de código preferentemente `Visual Studio Code`.
+3. Ejecutar el comando *npm start*.
+4. Abrir `http://localhost:3000` para ver la aplicación desde tu navegador.
+
+## Puede visitar la aplicación en la nube desde [https://e-sale-96fbf.web.app](https://e-sale-96fbf.web.app)
+
+![GIF navegacion](/public/Navegacion.gif "Navegación de la aplicación")
+
+## Consideraciones importantes
+Se utilizó el `LocalStorage` para persistir el carrito de los usuarios en sus equipos/dispositivos en el caso de que no finalicen el flujo de compra para mejorar la experiencia de uso.
+
+
 
 
 
